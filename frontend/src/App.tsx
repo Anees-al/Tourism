@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import TrendingPlaces from './components/TrendingPlaces'
+import About from './components/About'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Nav/>
       <Hero/>
       <TrendingPlaces/>
+      <About/>
 
     </div>
     <Footer/>

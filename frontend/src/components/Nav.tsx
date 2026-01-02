@@ -1,8 +1,8 @@
-
+import {motion} from 'framer-motion'
 
 const Nav = () => {
   return (
-    <div className='flex flex-row justify-between'>
+    <motion.div className='flex flex-row justify-between' initial={{y:-200,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:0.7}}>
 
         <div>
             <h1 className="text-4xl text-white font-black">Kerala.</h1>
@@ -19,7 +19,7 @@ const Nav = () => {
 
         <div></div>
       
-    </div>
+    </motion.div>
   )
 }
 
