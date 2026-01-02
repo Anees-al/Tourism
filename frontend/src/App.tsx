@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Footer from './components/Footer'
 import TrendingPlaces from './components/TrendingPlaces'
 import About from './components/About'
+import District from './components/District'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Hero/>
       <TrendingPlaces/>
       <About/>
+      <District/>
 
     </div>
     <Footer/>

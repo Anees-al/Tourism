@@ -20,7 +20,7 @@ const TrendingPlaces = () => {
     { name: 'varkala Beach', description: 'The Cliffside Sanctuary Where dramatic red laterite cliffs meet the endless blue of the Arabian Sea. Varkala is a unique coastal haven.', imageUrl: varkala }
   ]
 
-  // IMPORTANT: Duplicate the array for the loop
+  
   const duplicatedPlaces = [...places, ...places];
 
   return (
@@ -29,16 +29,16 @@ const TrendingPlaces = () => {
         <h1 className='text-4xl font-bold text-white'>Trending Places</h1>
       </div>
 
-      {/* 1. Viewport Wrapper: Crucial for clipping and positioning */}
+      
       <div className='relative w-full overflow-hidden'>
         
-        {/* 2. The Motion Div: Must have a width that fits all duplicated items */}
+      
         <motion.div 
           className='flex flex-row gap-5 px-5 w-max' 
           animate={{ x: ["0%", "-50%"] }} 
           transition={{
             ease: "linear",
-            duration: 30, // Adjust speed (higher = slower)
+            duration: 30, 
             repeat: Infinity
           }}
         >
@@ -51,7 +51,7 @@ const TrendingPlaces = () => {
 
               <div className='flex flex-col p-4 flex-1'>
                 <p className='text-white text-xl font-bold mb-2'>{place.name}</p>
-                {/* Fixed height or line-clamp prevents cards from growing/shrinking */}
+                
                 <p className='text-sm text-gray-400 leading-relaxed line-clamp-6'>
                     {place.description}
                 </p>
@@ -66,7 +66,6 @@ const TrendingPlaces = () => {
           ))}
         </motion.div>
 
-        {/* Optional: Visual Fades for the edges */}
         <div className='pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0f1614] to-transparent'></div>
         <div className='pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0f1614] to-transparent'></div>
       </div>
