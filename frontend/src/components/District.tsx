@@ -57,7 +57,7 @@ const District = () => {
           animate={{ x: ["0%", "-50%"] }} 
           transition={{
             ease: "linear",
-            duration: 30, 
+            duration:50, 
             repeat: Infinity
           }}
         >
