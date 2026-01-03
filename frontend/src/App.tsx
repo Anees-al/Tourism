@@ -6,6 +6,7 @@ import TrendingPlaces from './components/TrendingPlaces'
 import About from './components/About'
 import District from './components/District'
 import Ayurveda from './components/Ayurveda'
+import FeaturesExperience from './components/FeaturesExperience'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <About/>
       <District/>
       <Ayurveda/>
+      <FeaturesExperience/>
 
     </div>
     <Footer/>
