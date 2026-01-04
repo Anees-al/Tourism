@@ -14,18 +14,20 @@ import kannur from '../assets/kannur.jpg'
 import kasarkode from '../assets/kasarkode.jpg'
 import kottayam from '../assets/kottayam.jpg'
 import kozhikode from '../assets/kozhikode.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const District = () => {
   interface TravelDestination {
     name: string;
     description: string;
     imageUrl: string;
+    link:string
   }
 
   const places: TravelDestination[] = [
-    { name: 'Thiruvananthapuram', description: 'The Royal Gateway Built on seven hills, Kerala’s capital is a blend of grand colonial architecture and ancient spiritual heritage. From the gold-plated splendor of the Sree Padmanabhaswamy Temple to the pristine beaches of Kovalam, Trivandrum offers a sophisticated journey through history and royalty.', imageUrl:tvm  },
-    { name: 'Kollam', description: 'Where History Meets the Horizon As one of the world’s oldest trading ports, Kollam is the southern gateway to Kerala’s legendary backwaters. Centered around the massive Ashtamudi Lake, this ancient town is a mosaic of Chinese fishing nets, cashew plantations, and the iconic red-and-white Tangasseri Lighthouse.', imageUrl:kollam  },
-    { name: 'Pathanamthitta', description: 'The Sacred Heartland Nestled in the lap of the Western Ghats, Pathanamthitta is a land of divine spirituality and untamed wilderness. Home to the world-renowned Sabarimala forest shrine and the pristine Gavi rainforests, it is a destination where ancient temple chants echo through dense, mist-covered mountain ranges.', imageUrl:pathanamthitta  },
+    { name: 'Thiruvananthapuram', description: 'The Royal Gateway Built on seven hills, Kerala’s capital is a blend of grand colonial architecture and ancient spiritual heritage. From the gold-plated splendor of the Sree Padmanabhaswamy Temple to the pristine beaches of Kovalam, Trivandrum offers a sophisticated journey through history and royalty.', imageUrl:tvm ,link:'/tourism/trivandrum' },
+    { name: 'Kollam', description: 'Where History Meets the Horizon As one of the world’s oldest trading ports, Kollam is the southern gateway to Kerala’s legendary backwaters. Centered around the massive Ashtamudi Lake, this ancient town is a mosaic of Chinese fishing nets, cashew plantations, and the iconic red-and-white Tangasseri Lighthouse.', imageUrl:kollam,link:'/tourism/kollam'  },
+    { name: 'Pathanamthitta', description: 'The Sacred Heartland Nestled in the lap of the Western Ghats, Pathanamthitta is a land of divine spirituality and untamed wilderness. Home to the world-renowned Sabarimala forest shrine and the pristine Gavi rainforests, it is a destination where ancient temple chants echo through dense, mist-covered mountain ranges.', imageUrl:pathanamthitta ,link:'/tourism/pathanamthitta' },
     { name: 'Alappuzha', description: 'The Venice of the East Immerse yourself in a labyrinth of palm-fringed canals, emerald lagoons, and the rhythmic pulse of the backwaters. Famous for its iconic houseboats and the legendary Nehru Trophy Snake Boat Race, Alappuzha is the heart of Kerala’s tranquil aquatic soul.', imageUrl:alapuzha  },
     { name: 'Kottayam', description: 'The Gateway to Highland Serenity Bordered by the Western Ghats on the east and the Vembanad Lake on the west, Kottayam is a rich tapestry of sprawling rubber plantations and historic literature. It is the spiritual gateway to the hills, where ancient churches and quiet backwater stretches like Kumarakom offer a peaceful, scholarly charm.', imageUrl:kottayam  },
     { name: 'Edukki', description: 'The Wild Highland Sanctuary High in the Western Ghats, Idukki is a land of sheer cliffs, massive dams, and deep wildlife sanctuaries. Home to the towering Idukki Arch Dam and the misty peaks of Munnar, it is a region where raw nature meets engineering marvels amidst a landscape of spice gardens and cloud-kissed valleys.', imageUrl:edukki  },
@@ -41,6 +43,7 @@ const District = () => {
 
   
   const duplicatedPlaces = [...places, ...places];
+  const navigate=useNavigate()
 
   return (
     <div className='flex flex-col overflow-hidden w-full bg-[#0f1614] py-10 mt-10'>
@@ -76,7 +79,7 @@ const District = () => {
                 </p>
                 
                 <div className='mt-auto pt-4'>
-                  <button className='w-full text-white font-semibold bg-[#E07A5F] py-2 rounded-lg hover:bg-[#c66a51] transition-all active:scale-95'>
+                  <button className='w-full text-white font-semibold bg-[#E07A5F] py-2 rounded-lg hover:bg-[#c66a51] transition-all active:scale-95' onClick={()=>navigate(`${place.link}`)}>
                     More info
                   </button>
                 </div>

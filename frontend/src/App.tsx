@@ -1,27 +1,23 @@
-import kerala from './assets/kerala1.jpg'
-import Nav from './components/Nav'
-import Hero from './components/Hero'
-import Footer from './components/Footer'
-import TrendingPlaces from './components/TrendingPlaces'
-import About from './components/About'
-import District from './components/District'
-import Ayurveda from './components/Ayurveda'
-import FeaturesExperience from './components/FeaturesExperience'
+
+import { Route,Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Trivandrum from './pages/Trivandrum'
+import Kollam from './pages/Kollam'
+import Pathanamthitta from './pages/Pathanamthitta'
+
 
 const App = () => {
   return (
     <div>
-      <div style={{backgroundImage:`url(${kerala})`,backgroundSize:'cover'}} className='p-4 min-h-screen'>
-      <Nav/>
-      <Hero/>
-      <TrendingPlaces/>
-      <About/>
-      <District/>
-      <Ayurveda/>
-      <FeaturesExperience/>
 
-    </div>
-    <Footer/>
+      <Routes>
+        <Route path='/tourism'  element={<Home/>}/>
+        <Route path='/tourism/trivandrum'  element={<Trivandrum/>}/>
+        <Route path='/tourism/kollam' element={<Kollam/>}/>
+        <Route path='/tourism/pathanamthitta' element={<Pathanamthitta/>}/>
+      </Routes>
+     
+    
     </div>
   )
 }
