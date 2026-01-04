@@ -11,10 +11,10 @@ const App = () => {
     <div>
 
       <Routes>
-        <Route path='/tourism'  element={<Home/>}/>
-        <Route path='/tourism/trivandrum'  element={<Trivandrum/>}/>
-        <Route path='/tourism/kollam' element={<Kollam/>}/>
-        <Route path='/tourism/pathanamthitta' element={<Pathanamthitta/>}/>
+        <Route path='/Tourism'  element={<Home/>}/>
+        <Route path='/Tourism/trivandrum'  element={<Trivandrum/>}/>
+        <Route path='/Tourism/kollam' element={<Kollam/>}/>
+        <Route path='/Tourism/pathanamthitta' element={<Pathanamthitta/>}/>
       </Routes>
      
     
